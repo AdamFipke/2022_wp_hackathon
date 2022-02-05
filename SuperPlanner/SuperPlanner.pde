@@ -1,10 +1,11 @@
-import java.util.Date;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
+//import java.util.Date;
+//import java.util.Calendar;
+//import java.util.GregorianCalendar;
 import java.time.LocalDate;
+
 void setup() {
   size(1920, 1080);
-  Calendar cal = new GregorianCalendar();
+  //Calendar cal = new GregorianCalendar();
   
   textSize(18);
   String todaydate = LocalDate.now().toString(); 
