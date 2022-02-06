@@ -1,7 +1,5 @@
 String txt = "";
-String inputs[] = new String[4];
 int click = 0;
-int i = 0;
 
 void initLayout() {
   TEXTBOX box1 = new TEXTBOX(780, 360, 350, 30);
@@ -32,12 +30,9 @@ void keyPressed() {
     txt += key;
   }
   for (TEXTBOX t : textboxes) {
-    if(t.KEYPRESSED(key, keyCode)) {
-       inputs[i] = textboxes.get(i).Text;
-       println(inputs[i]);
-       i++;
-    }
+    t.KEYPRESSED(key, keyCode);
   }
+  
 }
 
 void keyReleased() {
@@ -84,9 +79,6 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
       week = 3;
       scene = 2;
     }
-    if (text.isMouseOver()) {
-      scene = 3;
-    }
   } else if (scene == 2) { //WEEK VIEW BUTTONS
     if (buttons2[0].isMouseOver()) {
       week--;
@@ -94,22 +86,12 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
     if (buttons2[1].isMouseOver()) {
       week++;
     }
+  } else if (scene == 3) {
     if (text.isMouseOver()) {
       scene = 3;
     }
-  } else if (scene == 3) {
-    if (text.isMouseOver()) {
-      scene = 1;
-    }
     if (buttons3[0].isMouseOver()) { //INSERT EVENT BUTTON
-      String userInputFormatted = "2022-02-05 08:00:00"; //someone figure out how to take user inputs and turn it into this format
-      String userInputDateFormatted = "2022-02-05";
-      String newEventName = "Dave's Bday";
       
-      LocalDateTime newEventDateTime = LocalDateTime.parse(userInputFormatted, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")); //extracts the userinput (dateTime)
-      LocalDate newEventDate = LocalDate.parse(userInputDateFormatted, DateTimeFormatter.ofPattern("yyyy-MM-dd")); //extracts the userinput (date)
-      events[numOfEvents] = new Event(newEventName, newEventDateTime, newEventDate); //saves the event to the save array
-      numOfEvents++;
     }
   }
 }
