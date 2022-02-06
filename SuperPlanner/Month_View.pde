@@ -3,7 +3,7 @@ fill(217,221,220);
   //DISPLAY DATES
   textAlign(LEFT);
   textSize(18);
-  stroke(0);
+  stroke(217,221,220);
   LocalDate firstdate = LocalDate.now();
   firstdate = firstdate.withDayOfMonth(1);
   LocalDate firstSunday = firstdate.with(firstInMonth(DayOfWeek.SUNDAY));

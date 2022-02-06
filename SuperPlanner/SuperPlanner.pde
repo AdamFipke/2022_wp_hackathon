@@ -51,7 +51,7 @@ void setup() {
     buttons0[2] = new Button(1050,660,75,75,color(145,200,126), color(145,200,126),color(0), color(49,112,52), "Tree");
     buttons0[3] = new Button(1050,760,75,75,color(44,57,142), color(148,21,207),color(110,18,155),color(236,71,210), "Tie-Dye");
     buttons0[4] = new Button(935,760,75,75,color(198,76,177),color(255,255,78),color(248,166,163),color(248,163,246), "Flower");
-    buttons0[8] = new Button(820,760,75,75,color(76,191,74),color(255,255,78),color(248,166,163),color(248,163,246), "Frogs");
+    buttons0[8] = new Button(820,760,75,75,color(76,191,74),color(76,191,74),color(62,139,61),color(248,163,246), "Frogs");
     buttons0[5] = new Button(820,860,75,75,color(80,184,231),color(80,184,231),color(0),color(128,132,137), "Default1");
     buttons0[6] = new Button(935,860,75,75,color(80,184,231),color(80,184,231),color(0),color(128,132,137), "Default2");
     buttons0[7] = new Button(1050,860,75,75,color(80,184,231),color(80,184,231),color(0),color(128,132,137), "Default3");

@@ -70,7 +70,7 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
       scene = 1;
     }else if (buttons0[5].isMouseOver()||buttons0[6].isMouseOver()||buttons0[7].isMouseOver()) {
       bg = d;
-      scene = 1;
+      scene = 2;
     }
     background(bg);
   } else if (scene == 1) { //MONTH VIEW BUTTONS
