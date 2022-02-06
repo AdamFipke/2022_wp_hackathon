@@ -1,5 +1,5 @@
 public void Month_View() {
-  fill(0);
+  
   //DISPLAY DATES
   textSize(18);
   LocalDate firstdate = LocalDate.now();
