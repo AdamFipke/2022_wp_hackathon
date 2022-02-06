@@ -16,7 +16,8 @@ void mousePressed() {
   } else {
     click = 0;
   }
-  weekButton();
+  //weekButton();
+  checkIfButtonsPressed();
 }
 
 void keyPressed() {
@@ -30,5 +31,11 @@ void keyReleased() {
     if (key == BACKSPACE) {
       txt = txt.substring(0, txt.length() - 2);
     }
+  }
+}
+
+void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
+  if (buttons[0].isMouseOver()) {
+    scene = 2;
   }
 }

@@ -2,8 +2,7 @@ Rectangle[] r;
 
 public void weekButton() { 
   if ( mouseX > r[0].x1 & mouseX < r[0].x2 & mouseY > r[0].y1 & mouseY < r[0].y2 ) {
-    background(200);
-    Week_View();
+    scene = 2;
   }
   if ( mouseX > r[1].x1 & mouseX < r[1].x2 & mouseY > r[1].y1 & mouseY < r[1].y2 ) {
     //change setup to week 2
