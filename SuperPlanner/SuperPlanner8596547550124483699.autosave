@@ -4,23 +4,24 @@ ArrayList<TEXTBOX> textboxes = new ArrayList<TEXTBOX>();
 
 //variables
   PImage HomeScreen;
-  PImage Purple;
-  PImage Space;
-  PImage Trees;
+  PImage PurpleBG;
+  PImage SpaceBG;
+  PImage TreesBG;
+  PImage TieDyeBG;
+  PImage FlowerBG;
 void setup() {
   size(1920, 1080);
-   HomeScreen = loadImage("HomeScreen.png");
-
- background(HomeScreen);
+  HomeScreen = loadImage("HomeScreen.png");
+  background(HomeScreen);
+  Backgrounds();
   Month_View();
-
+  initLayout();
 }
 
 void draw() {
   textAlign(LEFT);
-  for(TEXTBOX t : textboxes) {
-     t.DRAW(); 
-  }
-  //Week_View();
-
+ for(TEXTBOX t : textboxes) {
+    t.DRAW(); 
+ }
+ Week_View();
 }
