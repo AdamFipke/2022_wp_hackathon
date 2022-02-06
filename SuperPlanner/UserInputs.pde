@@ -46,10 +46,10 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
     }
   } else if (scene == 2) { //WEEK VIEW BUTTONS
     if (buttons2[0].isMouseOver()) {
-      
+      week--;
     }
     if (buttons2[1].isMouseOver()) {
-      
+      week++;
     }
   }
 }

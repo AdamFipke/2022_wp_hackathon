@@ -40,8 +40,8 @@ void setup() {
   }
   //SCENE 2 BUTTONS
   buttons2 = new Button[2]; //ADJUST SIZE IF YOUR ADDING A NEW BUTTON
-  buttons2[0] = new Button(720, 20, 40, 40, color(200, 200, 200), color(200, 200, 200), color(100, 100, 100), color(255, 0, 0), "<");
-  buttons2[1] = new Button(1180, 20, 40, 40, color(200, 200, 200), color(200, 200, 200), color(100, 100, 100), color(255, 0, 0), ">");
+  buttons2[0] = new Button(610, 20, 40, 40, color(200, 200, 200), color(200, 200, 200), color(100, 100, 100), color(255, 0, 0), "<");
+  buttons2[1] = new Button(1280, 20, 40, 40, color(200, 200, 200), color(200, 200, 200), color(100, 100, 100), color(255, 0, 0), ">");
 
 }
 
