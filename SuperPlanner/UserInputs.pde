@@ -35,7 +35,7 @@ void keyReleased() {
 }
 
 void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
-  if (buttons[0].isMouseOver()) {
+  if (buttons1[0].isMouseOver()) {
     scene = 2;
   }
 }
