@@ -1,8 +1,8 @@
 import java.time.format.*;
 
 public void Week_View() {
-  fill(0);
-  stroke(0);
+  fill(217,221,220);
+  stroke(217,221,220,100);
   //DISPLAY DATES
   int topTimes = 140; //location for where topmost time is shown
   textSize(26);
