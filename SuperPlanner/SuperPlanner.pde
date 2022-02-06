@@ -8,7 +8,7 @@ PImage Purple;
 PImage Space;
 PImage Trees;
 Button[] buttons;
-int scene; //1 = Month View
+int scene = 1; //1 = Month View
 
 void setup() {
   size(1920, 1080);
@@ -31,8 +31,10 @@ void draw() {
     t.DRAW();
   }
   
+  if (scene == 1) { //MONTH VIEW SCREEN
   Month_View();
   for (int i = 0; i < buttons.length; i++) { //updates buttons to see if they're being hovered over
     buttons[i].update();
+  }
   }
 }
