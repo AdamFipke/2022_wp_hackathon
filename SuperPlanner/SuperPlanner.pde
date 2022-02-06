@@ -42,7 +42,7 @@ void setup() {
   FlowerBG = loadImage("FlowerTheme.png"); 
   FrogsBG = loadImage("frogs.png");
   d = loadImage("default.png");
-
+  bg = d;
   //BUTTONS (LOAD THEM HERE) (int x, int y, int w, int h, color colour, color hovercolor, color border, color hoverborder, String text)
 
   //SCENE 0 BUTTONS
@@ -105,9 +105,15 @@ void draw() {
     fill(0);
     textSize(25);
     text("Enter event title:", 600, 384);
-    text("Enter event date:", 600, 464);
-    text("Enter event time:", 600, 544);
-    text("Enter event duration:", 558, 624);
+    text("Enter event date:", 600, 464);  
+    text("Enter event time:", 600, 544);  
+    text("Enter duration:", 600, 624);
+    
+    fill(65);
+    textSize(15);
+    text("YYYY-MM-DD",600,504);
+    text("HH:MM:SS",600,584);
+    text("In Minutes", 600, 664);
     textAlign(LEFT);
     for (TEXTBOX t : textboxes) {
       t.DRAW();

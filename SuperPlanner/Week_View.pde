@@ -1,6 +1,5 @@
  //<>//
 import java.time.format.*; //<>//
-
 public void Week_View() {
   fill(217,221,220);
   stroke(217,221,220,100);
@@ -63,6 +62,8 @@ public void Week_View() {
         fill(217,221,220);
       }
       k++;
+    
+ 
     }
     daycount++;
   }
