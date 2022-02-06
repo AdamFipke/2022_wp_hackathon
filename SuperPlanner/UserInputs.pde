@@ -37,29 +37,34 @@ void keyReleased() {
 void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
   if (scene == 0) { //TITLE SCREEN BUTTONS
     if (buttons0[0].isMouseOver()) {
-      background(PurpleBG);
+      bg=PurpleBG;
       scene = 1;
     } else if (buttons0[1].isMouseOver()) {
-      background(SpaceBG);
+      bg=SpaceBG;
       scene = 1;
     } else if (buttons0[2].isMouseOver()) {
-      background(TreesBG);
+      bg=TreesBG;
       scene = 1;
     } else if (buttons0[3].isMouseOver()) {
-      background(TieDyeBG);
+      bg = TieDyeBG;
       scene = 1;
     } else if (buttons0[4].isMouseOver()) {
-      background(FlowerBG);
+      bg = FlowerBG;
       scene = 1;
     }
+    background(bg);
   } else if (scene == 1) { //MONTH VIEW BUTTONS
     if (buttons1[0].isMouseOver()) {
       scene = 2;
     }
   } else if (scene == 2) { //WEEK VIEW BUTTONS
     if (buttons2[0].isMouseOver()) {
+      background(bg);
+      scene = 1;
     }
     if (buttons2[1].isMouseOver()) {
+      background(bg);
+      scene = 1;
     }
   }
 }

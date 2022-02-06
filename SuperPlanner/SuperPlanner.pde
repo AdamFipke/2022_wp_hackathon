@@ -9,6 +9,7 @@ PImage SpaceBG;
 PImage TreesBG;
 PImage TieDyeBG;
 PImage FlowerBG;
+PImage bg;
 Button[] buttons0; //scene 0 buttons
 Button[] buttons1; //scene 1 buttons
 Button[] buttons2; //scene 2 buttons
@@ -81,7 +82,6 @@ void draw() {
       buttons1[i].update();
     }
   } else if (scene == 2) { //WEEK VIEW SCREEN
-    background(200);
     Week_View();
     buttons2[0].update();
     buttons2[1].update();
