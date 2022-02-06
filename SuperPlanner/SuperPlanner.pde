@@ -9,7 +9,9 @@ PImage SpaceBG;
 PImage TreesBG;
 PImage TieDyeBG;
 PImage FlowerBG;
-Button[] buttons;
+Button[] buttons0; //scene 0 buttons
+Button[] buttons1; //scene 1 buttons
+Button[] buttons2; //scene 2 buttons
 int scene = 0; //1 = Month View, 2 = Week View
 
 void setup() {
@@ -28,6 +30,22 @@ void setup() {
     buttons[i] = new Button(0, 193 + 177*i, 1920, 177, color(255, 0, 0, 0), color(255, 0, 0, 0), color(255, 0, 0, 0), color(200, 0, 0), "");
   }
   buttons[6]= new Button(50, 50, 50, 50, color(60, 0, 0), color(60, 0, 0), color(100, 0, 0), color(100, 0, 0), "change theme");
+
+
+  //BUTTONS (LOAD THEM HERE) (int x, int y, int w, int h, color colour, color hovercolor, color border, color hoverborder, String text)
+  
+  //SCENE 0 BUTTONS
+  //buttons0 = new Button[0]; //ADJUST SIZE IF YOUR ADDING A NEW BUTTON
+  //SCENE 1 BUTTONS
+  buttons1 = new Button[5]; //ADJUST SIZE IF YOUR ADDING A NEW BUTTON
+  for (int i = 0; i < 5; i++) { //for the 5 weeks in scene 1
+    buttons1[i] = new Button(0, 193 + 177*i, 1920, 177, color(255, 0, 0, 0), color(255, 0, 0, 0), color(255, 0, 0, 0), color(200, 0, 0), "");
+  }
+  //SCENE 2 BUTTONS
+  buttons2 = new Button[2]; //ADJUST SIZE IF YOUR ADDING A NEW BUTTON
+  buttons2[0] = new Button(720, 20, 40, 40, color(200, 200, 200), color(200, 200, 200), color(100, 100, 100), color(255, 0, 0), "<");
+  buttons2[1] = new Button(1180, 20, 40, 40, color(200, 200, 200), color(200, 200, 200), color(100, 100, 100), color(255, 0, 0), ">");
+
 }
 
 void draw() {
@@ -38,14 +56,15 @@ void draw() {
   if (scene==0) { //TITLE SCREEN
    Title_View();
     buttons[6].update();
-   
   } else if (scene == 1) { //MONTH VIEW SCREEN
     Month_View();
-    for (int i = 0; i < 5; i++) { //updates buttons to see if they're being hovered over
-      buttons[i].update();
+    for (int i = 0; i < 5; i++) { //updates buttons to see if they're being hovered over (only first 5 which are the 'select week' buttons)
+      buttons1[i].update();
     }
   } else if (scene == 2) { //WEEK VIEW SCREEN
     background(200);
     Week_View();
+    buttons2[0].update();
+    buttons2[1].update();
   }
 }

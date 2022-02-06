@@ -1,5 +1,5 @@
 public void Month_View() {
-  
+
   //DISPLAY DATES
   textAlign(LEFT);
   textSize(18);
@@ -15,9 +15,23 @@ public void Month_View() {
     }
   }
 
+  //FONTS
+  PFont dayF;
+  dayF = createFont("RobotoSlab-Regular.ttf", 30);
+  PFont monthF;
+  monthF = createFont("RobotoSlab-Bold.ttf", 100);
+
   //WEEKDAY TITLES
+  textAlign(CENTER, BOTTOM);
+  textFont(dayF);
   textSize(30);
-  text("SUNDAY             MONDAY             TUESDAY             WEDNENDSAY             THURSDAY             FRIDAY             SATURDAY", 50, 190); //can be made more sophisticated
+  text("SUNDAY", 1920/7*0.5, 190);
+  text("MONDAY", 1920/7*1.5, 190);
+  text("TUESDAY", 1920/7*2.5, 190);
+  text("WEDNESDAY", 1920/7*3.5, 190);
+  text("THURSDAY", 1920/7*4.5, 190);
+  text("FRIDAY", 1920/7*5.5, 190);
+  text("SATURDAY", 1920/7*6.5, 190);
 
   //BOXES
   for (int i = 0; i < 8; i++) {
@@ -26,19 +40,19 @@ public void Month_View() {
     line(0, (height-200)*i/5+195, width, (height-200)*i/5+195);
   }
   line(0, 200, 0, height);
-  
+
   //MONTH TITLE (make prettier pls and ty)
   textSize(100);
   textAlign(CENTER);
   text(firstdate.getMonth().toString(), width/2, 110);
-  
+
   weekbuttons();
   ChangeMonthButton();
 }
 
 //WEEK BUTTONS
- void weekbuttons(){
-   r = new Rectangle[5];
+void weekbuttons() {
+  r = new Rectangle[5];
 
   for (int i = 0; i < 5; i++) {
     int x1 = 0;
@@ -51,12 +65,11 @@ public void Month_View() {
   for (int j = 0; j < 5; j++) {
     r[j].dra();
   }
- }
- 
- //CHANGE MONTH BUTTONS
- public void ChangeMonthButton(){
-  fill(142,142,142);
+}
+
+//CHANGE MONTH BUTTONS
+public void ChangeMonthButton() {
+  fill(142, 142, 142);
   triangle(650, 70, 690, 50, 690, 90);
   triangle(1230, 50, 1270, 70, 1230, 90);
- 
- }
+}
