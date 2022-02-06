@@ -70,6 +70,87 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
       scene = 1;
     } else if (buttons0[5].isMouseOver()||buttons0[6].isMouseOver()||buttons0[7].isMouseOver()) {
       bg = d;
+      //example schedule 1
+      //Sunday
+          String userInputFormatted = "2022-01-30 09:00:00";
+      String userInputDateFormatted = "2022-01-30";
+      String  newEventName = "Laundry";
+      int newDurationMins = 180;
+       addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
+          userInputFormatted = "2022-01-30 13:00:00";
+      userInputDateFormatted = "2022-01-30";
+      newEventName = "Meal Prep";
+      newDurationMins = 120;
+        userInputFormatted = "2022-01-30 16:00:00";
+      userInputDateFormatted = "2022-01-30";
+      newEventName = "Career Build";
+      newDurationMins = 180;
+      addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
+      //Monday
+      addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
+         userInputFormatted = "2022-01-31 08:00:00";
+      userInputDateFormatted = "2022-01-31";
+      newEventName = "Workout";
+      newDurationMins = 60;
+      addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
+       userInputFormatted = "2022-01-31 10:00:00";
+      userInputDateFormatted = "2022-01-31";
+      newEventName = "Work";
+      newDurationMins = 480;
+      //Tuesday
+      addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
+       userInputFormatted = "2022-02-01 10:00:00";
+      userInputDateFormatted = "2022-02-01";
+      newEventName = "Work";
+      newDurationMins = 480;
+      //Wednesday
+      addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
+        userInputFormatted = "2022-02-02 08:00:00";
+      userInputDateFormatted = "2022-02-02";
+      newEventName = "Workout";
+      newDurationMins = 60;
+      addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
+        userInputFormatted = "2022-02-02 10:00:00";
+      userInputDateFormatted = "2022-02-02";
+      newEventName = "Work";
+      newDurationMins = 480;
+      addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
+      //Thursday
+        userInputFormatted = "2022-02-03 10:00:00";
+      userInputDateFormatted = "2022-02-03";
+      newEventName = "Work";
+      newDurationMins = 480;
+      addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
+      //Friday
+        userInputFormatted = "2022-02-04 08:00:00";
+      userInputDateFormatted = "2022-02-04";
+      newEventName = "Workout";
+      newDurationMins = 60;
+      addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
+        userInputFormatted = "2022-02-04 10:00:00";
+      userInputDateFormatted = "2022-02-04";
+      newEventName = "Work";
+      newDurationMins = 480;
+      addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
+      //Saturday
+        userInputFormatted = "2022-02-05 09:00:00";
+      userInputDateFormatted = "2022-02-05";
+      newEventName = "Groceries";
+      newDurationMins = 90;
+      addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
+        userInputFormatted = "2022-02-05 13:00:00";
+      userInputDateFormatted = "2022-02-05";
+      newEventName = "Online Class";
+      newDurationMins = 180;
+      addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
+        userInputFormatted = "2022-02-05 19:00:00";
+      userInputDateFormatted = "2022-02-05";
+      newEventName = "Social Life";
+      newDurationMins = 300;
+      addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
+      
+      
+      
       scene = 2;
     }
     background(bg);
@@ -107,20 +188,41 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
       scene = 1;
       background(bg);
     }
-  } else if (scene == 3) {
+  } else if (scene == 3) 
     if (text.isMouseOver()) {
       scene = 1;
     }
-    if (buttons3[0].isMouseOver()) { //INSERT EVENT BUTTON
-      //EXAMPLE
-      String userInputFormatted = "2022-02-05 12:30:00"; //someone figure out how to take user inputs and turn it into this format
-      String userInputDateFormatted = "2022-02-05";
-      String newEventName = "Dave's Bday";
-      int newDurationMins = 300; //300 minutes
-      addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
-    }
+  if (buttons3[0].isMouseOver()) { //INSERT EVENT BUTTON
+    //EXAMPLE
+
+    String userInputFormatted = "2022-01-30 09:00:00";
+    String userInputDateFormatted = "2022-01-30";
+    String  newEventName = "Laundry";
+    int newDurationMins = 180;
+    addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
+    userInputFormatted = "2022-02-01 09:00:00";
+    userInputDateFormatted = "2022-02-01";
+    newEventName = "Laundry";
+    newDurationMins = 180;
+    addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
+    userInputFormatted = "2022-02-01 09:00:00";
+    userInputDateFormatted = "2022-02-02";
+    newEventName = "Laundry";
+    newDurationMins = 180;
+    addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
+    userInputFormatted = "2022-02-01 09:00:00";
+    userInputDateFormatted = "2022-02-03";
+    newEventName = "Laundry";
+    newDurationMins = 180;
+    addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
+    userInputFormatted = "2022-02-01 09:00:00";
+    userInputDateFormatted = "2022-02-04";
+    newEventName = "Laundry";
+    newDurationMins = 180;
+    addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
   }
 }
+
 
 void addEvent(String userInputFormatted, String userInputDateFormatted, String newEventName, int newDurationMins) {
   LocalDateTime newEventDateTime = LocalDateTime.parse(userInputFormatted, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")); //extracts the userinput (dateTime)

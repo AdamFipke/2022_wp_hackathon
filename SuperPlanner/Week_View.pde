@@ -56,9 +56,11 @@ public void Week_View() {
           }
         }
         fill(30, 30, 200, 50);
-        rect(width*i/7+14, topTimes+slotsBeforeStart*rowGirth, width/7, durationRectLength*rowGirth); //display a rectangle idk
+        rect(100+260*i, topTimes+slotsBeforeStart*rowGirth, 260, durationRectLength*rowGirth); //display a rectangle idk
         fill(0);
-        text(events[k].eName, width*i/7+150, topTimes+slotsBeforeStart*rowGirth+durationRectLength*rowGirth/2); //display event name
+        textAlign(LEFT);
+        text(events[k].eName, 150+260*i, topTimes+slotsBeforeStart*rowGirth+durationRectLength*rowGirth/2); //display event name
+        fill(217,221,220);
       }
       k++;
     }
