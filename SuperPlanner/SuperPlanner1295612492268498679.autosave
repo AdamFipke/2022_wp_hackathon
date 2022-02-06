@@ -58,9 +58,9 @@ void setup() {
     buttons1[i] = new Button(0, 193 + 177*i, 1920, 177, color(255, 0, 0, 0), color(255, 0, 0, 0), color(255, 0, 0, 0), color(200, 0, 0), "");
   }
   //SCENE 2 BUTTONS
-  buttons2 = new Button[2]; //ADJUST SIZE IF YOUR ADDING A NEW BUTTON
-  buttons2[0] = new Button(610, 20, 40, 40, color(200, 200, 200), color(200, 200, 200), color(100, 100, 100), color(255, 0, 0), "<");
-  buttons2[1] = new Button(1280, 20, 40, 40, color(200, 200, 200), color(200, 200, 200), color(100, 100, 100), color(255, 0, 0), ">");
+  buttons2 = new Button[2]; //ADJUST SIZE IF YOU'RE ADDING A NEW BUTTON
+  buttons2[0] = new Button(720, 20, 40, 40, color(200, 200, 200), color(200, 200, 200), color(100, 100, 100), color(255, 0, 0), "<");
+  buttons2[1] = new Button(1180, 20, 40, 40, color(200, 200, 200), color(200, 200, 200), color(100, 100, 100), color(255, 0, 0), ">");
 
 }
 
@@ -82,7 +82,7 @@ void draw() {
       buttons1[i].update();
     }
   } else if (scene == 2) { //WEEK VIEW SCREEN
-  background(bg);
+    background(bg);
     Week_View();
     buttons2[0].update();
     buttons2[1].update();

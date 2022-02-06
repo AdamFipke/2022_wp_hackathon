@@ -1,8 +1,8 @@
 import java.time.format.*;
 
 public void Week_View() {
-  fill(0);
-  stroke(0);
+  fill(255);
+  stroke(255);
   //DISPLAY DATES
   int topTimes = 140; //location for where topmost time is shown
   textSize(26);
@@ -44,6 +44,6 @@ public void Week_View() {
 
   //MONTH TITLE (make prettier pls and ty)
   textSize(70);
-  textAlign(CENTER); //daycount%30
-  text(firstSunday.plusDays(daycount).getMonth().toString() + " " + firstSunday.plusDays(daycount).getYear(), width/2, 60);
+  textAlign(CENTER);
+  text(firstdate.getMonth().toString(), width/2, 60);
 }
