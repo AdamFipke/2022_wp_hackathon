@@ -57,8 +57,7 @@ public void Week_View() {
         fill(30, 30, 200, 50);
         rect(100+260*i, topTimes+slotsBeforeStart*rowGirth, 260, durationRectLength*rowGirth); //display a rectangle idk
         fill(0);
-        textAlign(LEFT);
-        text(events[k].eName, 150+260*i, topTimes+slotsBeforeStart*rowGirth+durationRectLength*rowGirth/2); //display event name
+        text(events[k].eName, 200+260*i, topTimes+slotsBeforeStart*rowGirth+durationRectLength*rowGirth/2); //display event name
         fill(217,221,220);
       }
       k++;
