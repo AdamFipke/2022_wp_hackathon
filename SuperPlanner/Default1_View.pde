@@ -1,3 +1,5 @@
-public class DefaultView{
+public void DefaultView(){
+  
+  Week_View();
 
 }
