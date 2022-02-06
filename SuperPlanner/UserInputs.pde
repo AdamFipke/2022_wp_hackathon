@@ -99,7 +99,7 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
     }
   } else if (scene == 3) {
     if (text.isMouseOver()) {
-      scene = 2;
+      scene = 1;
     }
     if (buttons3[0].isMouseOver()) { //INSERT EVENT BUTTON
       String userInputFormatted = "2022-02-05 08:00:00"; //someone figure out how to take user inputs and turn it into this format
