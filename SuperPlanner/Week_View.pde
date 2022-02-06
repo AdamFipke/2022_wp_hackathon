@@ -44,6 +44,6 @@ public void Week_View() {
 
   //MONTH TITLE (make prettier pls and ty)
   textSize(70);
-  textAlign(CENTER);
-  text(firstdate.getMonth().toString(), width/2, 60);
+  textAlign(CENTER); //daycount%30
+  text(firstSunday.plusDays(daycount).getMonth().toString() + " " + firstSunday.plusDays(daycount).getYear(), width/2, 60);
 }

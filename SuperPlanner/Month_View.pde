@@ -17,7 +17,7 @@ fill(255);
 
   //WEEKDAY TITLES
   textAlign(CENTER, BOTTOM);
-  textFont(dayF);
+  //textFont(dayF);
   textSize(30);
   text("SUNDAY", 1920/7*0.5, 190);
   text("MONDAY", 1920/7*1.5, 190);
