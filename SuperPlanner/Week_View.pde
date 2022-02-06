@@ -20,26 +20,32 @@ public void Week_View() {
 
   //Times
   //Adjustable variables (possibly make it so user can adjust them)
-  int numOfTimes = 48; //how many times to be shown (try to make adjustable by user)
+  int numOfTimes = 36; //how many times to be shown (try to make adjustable by user)
   int timeIntervals = 30; //how much time in between the intervals (in mins)
-  String startTime = "2022-02-05 06:00:00"; //starts the time at 6am
+  String startTime = "2022-02-05 08:00:00"; //starts the time at 8am
   
+  strokeWeight(1);
   int textSizeTimes = (int)(26*40/numOfTimes); //for adjusting the size of the text as more Times are added
   textSize(textSizeTimes);
   LocalDateTime firstDateTime = LocalDateTime.parse(startTime,DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")); //extracts the date out of startTime
   DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm"); //the format of the displayed time
   for (int i = 0; i < numOfTimes; i++) {
-    text(firstDateTime.plusMinutes(i*timeIntervals).format(formatter), 20, topTimes+26+(height-topTimes)/numOfTimes*i); //the 26 is the textSize
+    int timey = topTimes+26+(height-topTimes)/numOfTimes*i; //the 26 is the textSize
+    text(firstDateTime.plusMinutes(i*timeIntervals).format(formatter), 8, timey); //writes the times
+    line(0, timey+1, width, timey+1); //puts the lines in between the times
   }
 
-  //BOXES
+  //Vertical Lines
   for (int i = -1; i < 8; i++) {
     strokeWeight(4);
-    line(width*i/7+width/7, 200, width*i/7+width/7, height);
+    line((width-100)*i/7+100, topTimes, (width-100)*i/7+100, height);
   }
-
+  line(100, topTimes, 100, height);
+  
   //MONTH TITLE (make prettier pls and ty)
   textSize(70);
   textAlign(CENTER);
   text(firstdate.getMonth().toString(), width/2, 60);
+  
+  
 }

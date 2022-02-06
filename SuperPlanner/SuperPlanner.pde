@@ -7,4 +7,5 @@ void setup() {
   bg = loadImage("SpaceTheme.png");
   background(bg);
   Month_View();
+  //Week_View();
 }
