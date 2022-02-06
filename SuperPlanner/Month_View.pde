@@ -30,6 +30,8 @@ public void Month_View() {
   textAlign(CENTER);
   text(firstdate.getMonth().toString(), width/2, 110);
   weekbuttons();
+  ChangeMonthButton();
+  
 }
 
 //WEEK BUTTONS
@@ -48,5 +50,11 @@ public void Month_View() {
     r[j].dra();
   }
  }
+ 
+ //CHANGE MONTH BUTTONS
+ public void ChangeMonthButton(){
+  fill(142,142,142);
+  triangle(650, 70, 690, 50, 690, 90);
+  triangle(1230, 50, 1270, 70, 1230, 90);
  
  
