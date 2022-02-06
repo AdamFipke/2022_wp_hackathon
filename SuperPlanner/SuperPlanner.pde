@@ -9,7 +9,6 @@ void setup() {
   bg = loadImage("SpaceTheme.png");
   background(bg);
   Month_View();
-  initLayout();
 }
 
 void draw() {
