@@ -59,10 +59,11 @@ void setup() {
     buttons1[i] = new Button(0, 193 + 177*i, 1920, 177, color(255, 0, 0, 0), color(255, 0, 0, 0), color(255, 0, 0, 0), color(200, 0, 0), "");
   }
   //SCENE 2 BUTTONS
-  buttons2 = new Button[2]; //ADJUST SIZE IF YOUR ADDING A NEW BUTTON
+  buttons2 = new Button[3]; //ADJUST SIZE IF YOUR ADDING A NEW BUTTON
   text = new Button(50, 75, 90, 30, color(200), color(200), color(0), color(255, 0, 0), "Add Event");
   buttons2[0] = new Button(610, 20, 40, 40, color(200, 200, 200), color(200, 200, 200), color(100, 100, 100), color(255, 0, 0), "<");
   buttons2[1] = new Button(1280, 20, 40, 40, color(200, 200, 200), color(200, 200, 200), color(100, 100, 100), color(255, 0, 0), ">");
+  buttons2[2] = new Button(1750,30,90,40,color(217,221,220), color(217,221,220), color(255), color(0), "Month");
   //SCENE 3 BUTTONS
   buttons3 = new Button[1]; //ADJUST SIZE IF YOUR ADDING A NEW BUTTON
   buttons3[0] = new Button(1000,700,100,40, color(200, 200, 200), color(200, 200, 200), color(100, 100, 100), color(255, 0, 0), "Insert Event");
@@ -90,6 +91,7 @@ void draw() {
     Week_View();
     buttons2[0].update();
     buttons2[1].update();
+    buttons2[2].update();
   } else if (scene == 3) {
     fill(180);
     rect(480, 270, 960, 540);
