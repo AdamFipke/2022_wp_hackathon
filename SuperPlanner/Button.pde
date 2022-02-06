@@ -2,7 +2,7 @@ public class Button {
   int x, y, w, h; //x,y are the top left coordinate of the button
   color colour, hovercolor, border, hoverborder;
   String text;
-
+  
   public Button(int x, int y, int w, int h, color colour, color border, String text) {
     this.x = x; 
     this.y = y;
