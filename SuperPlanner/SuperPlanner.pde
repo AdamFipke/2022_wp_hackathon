@@ -9,8 +9,8 @@ PImage SpaceBG;
 PImage TreesBG;
 PImage TieDyeBG;
 PImage FlowerBG;
-PImage bg;
-PImage d;
+PImage bg; 
+PImage d; //default
 Button[] buttons0; //scene 0 buttons
 Button[] buttons1; //scene 1 buttons
 Button[] buttons2; //scene 2 buttons

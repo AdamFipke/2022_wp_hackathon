@@ -1,5 +1,5 @@
 public void Month_View() {
-fill(255);
+fill(217,221,220);
   //DISPLAY DATES
   textAlign(LEFT);
   textSize(18);
