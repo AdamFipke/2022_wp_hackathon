@@ -102,7 +102,7 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
     }
   } else if (scene == 3) {
     if (text.isMouseOver()) {
-      scene = 2;
+      scene = 1;
     }
     if (buttons3[0].isMouseOver()) { //INSERT EVENT BUTTON
 
