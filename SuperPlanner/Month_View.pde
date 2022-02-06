@@ -3,6 +3,7 @@ public void Month_View() {
   //DISPLAY DATES
   textAlign(LEFT);
   textSize(18);
+  stroke(0);
   LocalDate firstdate = LocalDate.now();
   firstdate = firstdate.withDayOfMonth(1);
   LocalDate firstSunday = firstdate.with(firstInMonth(DayOfWeek.SUNDAY));
@@ -24,12 +25,14 @@ public void Month_View() {
     line(width*i/7+width/7, 200, width*i/7+width/7, height);
     line(0, (height-200)*i/5+195, width, (height-200)*i/5+195);
   }
-
+  line(0, 200, 0, height);
+  
   //MONTH TITLE (make prettier pls and ty)
   textSize(100);
   textAlign(CENTER);
   text(firstdate.getMonth().toString(), width/2, 110);
-  weekbuttons();
+  
+  
 }
 
 //WEEK BUTTONS

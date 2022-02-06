@@ -25,6 +25,7 @@ Rectangle(float x1, float x2, float y1, float y2){
 void dra(){
   fill(255, 255);
   noStroke();
+  fill(5,5,67);
   rect(x1, x2, y1, y2);
 }
 
