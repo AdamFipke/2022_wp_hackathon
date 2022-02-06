@@ -15,12 +15,6 @@ public void Month_View() {
     }
   }
 
-  //FONTS
-  PFont dayF;
-  dayF = createFont("RobotoSlab-Regular.ttf", 30);
-  PFont monthF;
-  monthF = createFont("RobotoSlab-Bold.ttf", 100);
-
   //WEEKDAY TITLES
   textAlign(CENTER, BOTTOM);
   textFont(dayF);
