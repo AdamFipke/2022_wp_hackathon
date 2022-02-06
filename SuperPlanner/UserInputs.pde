@@ -36,10 +36,10 @@ void keyReleased() {
 
 void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
   if (scene == 0) { //TITLE SCREEN BUTTONS
-    //if (buttons0[0].isMouseOver()) {
-    //  background(PurpleBG);
-    //  scene = 1;
-    //}
+    if (buttons0[0].isMouseOver()) {
+      background(PurpleBG);
+      scene = 1;
+    }
   } else if (scene == 1) { //MONTH VIEW BUTTONS
     if (buttons1[0].isMouseOver()) {
       scene = 2;
