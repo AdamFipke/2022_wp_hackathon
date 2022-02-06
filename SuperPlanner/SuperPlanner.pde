@@ -13,6 +13,7 @@ PImage bg;
 Button[] buttons0; //scene 0 buttons
 Button[] buttons1; //scene 1 buttons
 Button[] buttons2; //scene 2 buttons
+Button[] buttons3;
 Button text;       //button to swap to scene 3
 int scene = 0; //0 = Title View, 1 = Month View, 2 = Week View
 PFont dayF;
@@ -54,6 +55,9 @@ void setup() {
   text = new Button(50, 75, 90, 30, color(200), color(200), color(0), color(255, 0, 0), "Add Event");
   buttons2[0] = new Button(610, 20, 40, 40, color(200, 200, 200), color(200, 200, 200), color(100, 100, 100), color(255, 0, 0), "<");
   buttons2[1] = new Button(1280, 20, 40, 40, color(200, 200, 200), color(200, 200, 200), color(100, 100, 100), color(255, 0, 0), ">");
+  //SCENE 3 BUTTONS
+  buttons3 = new Button[1]; //ADJUST SIZE IF YOUR ADDING A NEW BUTTON
+  buttons3[0] = new Button(1000,700,100,40, color(200, 200, 200), color(200, 200, 200), color(100, 100, 100), color(255, 0, 0), "Insert Event");
 }
 
 void draw() {
@@ -88,5 +92,6 @@ void draw() {
     for (TEXTBOX t : textboxes) {
       t.DRAW();
     }
+    buttons3[0].update();
   }
 }

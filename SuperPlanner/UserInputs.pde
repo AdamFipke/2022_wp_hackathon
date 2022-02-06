@@ -78,7 +78,6 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
       week = 3;
       scene = 2;
     }
-    
   } else if (scene == 2) { //WEEK VIEW BUTTONS
     if (buttons2[0].isMouseOver()) {
       week--;
@@ -86,8 +85,12 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
     if (buttons2[1].isMouseOver()) {
       week++;
     }
-  }
-  if (text.isMouseOver()) {
-    scene = 3; 
+  } else if (scene == 3) {
+    if (text.isMouseOver()) {
+      scene = 3;
+    }
+    if (buttons3[0].isMouseOver()) { //INSERT EVENT BUTTON
+      
+    }
   }
 }
