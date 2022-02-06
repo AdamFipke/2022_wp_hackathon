@@ -65,10 +65,10 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
     } else if (buttons0[4].isMouseOver()) {
       bg = FlowerBG;
       scene = 1;
-    }else if(buttons0[8].isMouseOver()){
+    } else if (buttons0[8].isMouseOver()) {
       bg = FrogsBG;
       scene = 1;
-    }else if (buttons0[5].isMouseOver()||buttons0[6].isMouseOver()||buttons0[7].isMouseOver()) {
+    } else if (buttons0[5].isMouseOver()||buttons0[6].isMouseOver()||buttons0[7].isMouseOver()) {
       bg = d;
       scene = 2;
     }
@@ -103,24 +103,28 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
     if (text.isMouseOver()) {
       scene = 3;
     }
-    if(buttons2[2].isMouseOver()){
+    if (buttons2[2].isMouseOver()) {
       scene = 1;
       background(bg);
-      
-  }} else if (scene == 3) {
+    }
+  } else if (scene == 3) {
     if (text.isMouseOver()) {
       scene = 1;
     }
     if (buttons3[0].isMouseOver()) { //INSERT EVENT BUTTON
+      //EXAMPLE
       String userInputFormatted = "2022-02-05 12:30:00"; //someone figure out how to take user inputs and turn it into this format
       String userInputDateFormatted = "2022-02-05";
       String newEventName = "Dave's Bday";
       int newDurationMins = 300; //300 minutes
- 
-      LocalDateTime newEventDateTime = LocalDateTime.parse(userInputFormatted, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")); //extracts the userinput (dateTime)
-      LocalDate newEventDate = LocalDate.parse(userInputDateFormatted, DateTimeFormatter.ofPattern("yyyy-MM-dd")); //extracts the userinput (date)
-      events[numOfEvents] = new Event(newEventName, newEventDateTime, newEventDate, newDurationMins); //saves the event to the save array
-      numOfEvents++;
+      addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
     }
   }
+}
+
+void addEvent(String userInputFormatted, String userInputDateFormatted, String newEventName, int newDurationMins) {
+  LocalDateTime newEventDateTime = LocalDateTime.parse(userInputFormatted, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")); //extracts the userinput (dateTime)
+  LocalDate newEventDate = LocalDate.parse(userInputDateFormatted, DateTimeFormatter.ofPattern("yyyy-MM-dd")); //extracts the userinput (date)
+  events[numOfEvents] = new Event(newEventName, newEventDateTime, newEventDate, newDurationMins); //saves the event to the save array
+  numOfEvents++;
 }
