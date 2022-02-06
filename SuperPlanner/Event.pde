@@ -11,6 +11,7 @@ void mousePressed() {
   for(TEXTBOX t : textboxes) {
     t.PRESSED(mouseX, mouseY); 
   }
+ weekButton();
 }
 
 void keyPressed() {
