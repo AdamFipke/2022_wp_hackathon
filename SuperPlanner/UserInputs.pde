@@ -206,22 +206,11 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
     String userInputFormatted = userInputDateFormatted.concat(" " + inputs[2]); //inputs[2] is time and inputs[1] is date
     Input = Integer.valueOf(inputs[3]);
     int newDurationMins = Input;
-    for (int i = 0; i < 4; i++) {
-      println(inputs[i]);
-    }
     addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
     i = 0;
     scene = 1;
   }
 }
-
-//String userInputFormatted = inputs[0];
-//String userInputDateFormatted = inputs[1];
-//tring  newEventName = inputs[2];
-//int newDurationMins = 180;
-//addEvent(userInputFormatted, userInputDateFormatted, newEventName, newDurationMins);
-
-
 
 void addEvent(String userInputFormatted, String userInputDateFormatted, String newEventName, int newDurationMins) {
   LocalDateTime newEventDateTime = LocalDateTime.parse(userInputFormatted, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")); //extracts the userinput (dateTime)
