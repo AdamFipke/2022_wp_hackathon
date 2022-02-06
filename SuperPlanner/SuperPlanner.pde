@@ -12,7 +12,18 @@ PImage FlowerBG;
 Button[] buttons0; //scene 0 buttons
 Button[] buttons1; //scene 1 buttons
 Button[] buttons2; //scene 2 buttons
-int scene = 0; //1 = Month View, 2 = Week View
+int scene = 0; //0 = Title View, 1 = Month View, 2 = Week View
+PFont dayF;
+PFont monthF;
+
+void fonts(){
+dayF = createFont("RobotoSlab-Regular.ttf", 30);
+monthF = createFont("RobotoSlab-Bold.ttf", 100);
+}
+
+int week = -1; //what week is selected for Week_View (-1 is the current week)
+
+
 
 void setup() {
   size(1920, 1080);
@@ -24,7 +35,10 @@ void setup() {
   FlowerBG = loadImage("FlowerTheme.png"); 
 
 
+
   
+
+
 
 
 
