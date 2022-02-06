@@ -65,7 +65,10 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
     } else if (buttons0[4].isMouseOver()) {
       bg = FlowerBG;
       scene = 1;
-    } else if (buttons0[5].isMouseOver()||buttons0[6].isMouseOver()||buttons0[7].isMouseOver()) {
+    }else if(buttons0[8].isMouseOver()){
+      bg = FrogsBG;
+      scene = 1;
+    }else if (buttons0[5].isMouseOver()||buttons0[6].isMouseOver()||buttons0[7].isMouseOver()) {
       bg = d;
       scene = 1;
     }
