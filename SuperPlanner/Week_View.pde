@@ -34,7 +34,7 @@ public void Week_View() {
   }
 
   //DISPLAY DATES
-  fill(0);
+  fill(217,221,220);
   textSize(26);
   LocalDate firstdate = LocalDate.now();
   firstdate = firstdate.withDayOfMonth(1);
