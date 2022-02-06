@@ -38,6 +38,8 @@ public class Button {
     strokeWeight(3);
     rect(x, y, w, h, 4);
     textAlign(CENTER);
+    fill(0);
+    textSize(w/3);
     text(text, x+w/2, y+h/2);
   }
 
