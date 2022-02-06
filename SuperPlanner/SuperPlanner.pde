@@ -4,17 +4,24 @@ ArrayList<TEXTBOX> textboxes = new ArrayList<TEXTBOX>();
 
 //variables
 PImage HomeScreen;
-PImage Purple;
-PImage Space;
-PImage Trees;
+PImage PurpleBG;
+PImage SpaceBG;
+PImage TreesBG;
+PImage TieDyeBG;
+PImage FlowerBG;
 Button[] buttons;
-int scene = 1; //1 = Month View, 2 = Week View
+int scene = 0; //1 = Month View, 2 = Week View
 
 void setup() {
   size(1920, 1080);
   HomeScreen = loadImage("HomeScreen.png");
+   PurpleBG= loadImage("Purple.png");
+ SpaceBG = loadImage("SpaceTheme.png");
+ TreesBG = loadImage("TreeTheme.png");
+ TieDyeBG = loadImage("TieDyeTheme.png");
+ FlowerBG = loadImage("FlowerTheme.png"); 
 
-  background(HomeScreen);
+ 
   Month_View();
   weekbuttons();
 
@@ -30,8 +37,9 @@ void draw() {
   for (TEXTBOX t : textboxes) { //ishaans stuff
     t.DRAW();
   }
-
-  if (scene == 1) { //MONTH VIEW SCREEN
+  if(scene==0){ //TITLE SCREEN
+    Title_View();}
+  else if (scene == 1) { //MONTH VIEW SCREEN
     Month_View();
     for (int i = 0; i < buttons.length; i++) { //updates buttons to see if they're being hovered over
       buttons[i].update();

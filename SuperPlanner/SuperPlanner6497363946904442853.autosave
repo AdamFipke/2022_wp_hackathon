@@ -1,0 +1,25 @@
+import java.time.*;
+import static java.time.temporal.TemporalAdjusters.firstInMonth;
+ArrayList<TEXTBOX> textboxes = new ArrayList<TEXTBOX>();
+
+//variables
+  PImage HomeScreen;
+  PImage Purple;
+  PImage Space;
+  PImage Trees;
+void setup() {
+  size(1920, 1080);
+   HomeScreen = loadImage("HomeScreen.png");
+   background(HomeScreen);
+   
+  Month_View();
+}
+
+void draw() {
+  textAlign(LEFT);
+  for(TEXTBOX t : textboxes) {
+     t.DRAW(); 
+  }
+  //Week_View();
+
+}
