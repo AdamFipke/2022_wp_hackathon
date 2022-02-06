@@ -54,8 +54,22 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
     }
   } else if (scene == 1) { //MONTH VIEW BUTTONS
     if (buttons1[0].isMouseOver()) {
+      week = -1;
+      scene = 2;
+    } else if (buttons1[1].isMouseOver()) {
+      week = 0;
+      scene = 2;
+    } else if (buttons1[2].isMouseOver()) {
+      week = 1;
+      scene = 2;
+    } else if (buttons1[3].isMouseOver()) {
+      week = 2;
+      scene = 2;
+    } else if (buttons1[4].isMouseOver()) {
+      week = 3;
       scene = 2;
     }
+    
   } else if (scene == 2) { //WEEK VIEW BUTTONS
     if (buttons2[0].isMouseOver()) {
       week--;
