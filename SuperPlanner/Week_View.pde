@@ -50,6 +50,6 @@ text("SATURDAY", (width-100)/7*7-10, topTimes-26);
 
   //MONTH TITLE (make prettier pls and ty)
   textSize(70);
-  textAlign(CENTER); //daycount%30
+  textAlign(CENTER); 
   text(firstSunday.plusDays(daycount).getMonth().toString() + " " + firstSunday.plusDays(daycount).getYear(), width/2, 60);
 }
