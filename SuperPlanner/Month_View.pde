@@ -13,7 +13,7 @@ fill(255);
       text(firstSunday.plusDays(daycount).getDayOfMonth(), width*i/7+width/8, (height-200)*(j)/5+220); //dsplays the dates
       int k = 0;
       while (events[k] != null) { //for every event
-        if ((firstSunday.plusDays(daycount).getDayOfMonth() == events[k].date.getDayOfMonth()) && (firstSunday.plusDays(daycount).getMonth() == events[k].date.getMonth()) && (firstSunday.plusDays(daycount).getYear() == events[k].date.getYear())){ //if the event is has the same day, month, year //<>//
+        if ((firstSunday.plusDays(daycount).getDayOfMonth() == events[k].date.getDayOfMonth()) && (firstSunday.plusDays(daycount).getMonth() == events[k].date.getMonth()) && (firstSunday.plusDays(daycount).getYear() == events[k].date.getYear())){ //if the event is has the same day, month, year
           rect(width*i/7, (height-200)*(j)/5+240,30,30); //display a rectangle idk
           text(events[k].eName,width*i/7, (height-200)*(j)/5+240); //display event name
         }

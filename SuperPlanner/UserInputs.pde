@@ -102,13 +102,14 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
       scene = 1;
     }
     if (buttons3[0].isMouseOver()) { //INSERT EVENT BUTTON
-      String userInputFormatted = "2022-02-05 08:00:00"; //someone figure out how to take user inputs and turn it into this format
+      String userInputFormatted = "2022-02-05 12:30:00"; //someone figure out how to take user inputs and turn it into this format
       String userInputDateFormatted = "2022-02-05";
       String newEventName = "Dave's Bday";
+      int newDurationMins = 300; //300 minutes
       
       LocalDateTime newEventDateTime = LocalDateTime.parse(userInputFormatted, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")); //extracts the userinput (dateTime)
       LocalDate newEventDate = LocalDate.parse(userInputDateFormatted, DateTimeFormatter.ofPattern("yyyy-MM-dd")); //extracts the userinput (date)
-      events[numOfEvents] = new Event(newEventName, newEventDateTime, newEventDate); //saves the event to the save array
+      events[numOfEvents] = new Event(newEventName, newEventDateTime, newEventDate, newDurationMins); //saves the event to the save array
       numOfEvents++;
     }
   }
