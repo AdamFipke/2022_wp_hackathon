@@ -38,4 +38,7 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
   if (buttons[0].isMouseOver()) {
     scene = 2;
   }
-}
+  else if(buttons[6].isMouseOver()){
+    background(PurpleBG);
+    scene = 1;
+}}
