@@ -9,7 +9,7 @@ public void Week_View() {
   LocalDate firstdate = LocalDate.now();
   firstdate = firstdate.withDayOfMonth(1);
   LocalDate firstSunday = firstdate.with(firstInMonth(DayOfWeek.SUNDAY));
-  int daycount = -7;
+  int daycount = -7; //adjusting this will adjust the week (by multiples of 7), eg. -7 is the current week, 0 is next week etc.
   for (int i = 0; i < 7; i++) { //7 days per week
     text(firstSunday.plusDays(daycount).getDayOfMonth(), width*i/7+width/20, topTimes-26); //dsplays the dates
     daycount++;
