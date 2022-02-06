@@ -36,11 +36,9 @@ public class Button {
       fill(colour);
     }
     strokeWeight(3);
-    rect(x, y, w, h, 4);
+    rect(x, y, w, h, 6);
     textAlign(CENTER);
-    fill(0);
-    textSize(w/5.5);
-    text(text, x+w/2, y+h/1.5);
+    text(text, x+w/2, y+h/2);
   }
 
   boolean isMouseOver() {

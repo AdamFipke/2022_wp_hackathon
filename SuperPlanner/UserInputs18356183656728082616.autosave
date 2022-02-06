@@ -2,11 +2,14 @@ String txt = "";
 int click = 0;
 
 void initLayout() {
-  TEXTBOX box1 = new TEXTBOX(720, 310, 300, 30);
-  textboxes.add(box1);
+  TEXTBOX box = new TEXTBOX(75, 100, 100, 30);
+  textboxes.add(box);
 }
 
 void mousePressed() {
+  for (TEXTBOX t : textboxes) {
+    t.PRESSED(mouseX, mouseY);
+  }
   if ((mouseX >= 400 && mouseX <= 600) &&(mouseY >= 200 && mouseY <= 400)) {
     click = 1;
   } else {
@@ -14,17 +17,14 @@ void mousePressed() {
   }
   //weekButton();
   checkIfButtonsPressed();
-  for (TEXTBOX t : textboxes) {
-    t.PRESSED(mouseX, mouseY);
-  }
 }
 
 void keyPressed() {
-  if (click == 1) {
-    txt += key;
-  }
   for (TEXTBOX t : textboxes) {
     t.KEYPRESSED(key, keyCode);
+  }
+  if (click == 1) {
+    txt += key;
   }
 }
 
@@ -37,10 +37,7 @@ void keyReleased() {
 }
 
 void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
-  if (buttons1[0].isMouseOver()) {
+  if (buttons[0].isMouseOver()) {
     scene = 2;
-  }
-  if (text.isMouseOver()) {
-    scene = 3; 
   }
 }
