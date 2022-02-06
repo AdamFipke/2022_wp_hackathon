@@ -78,6 +78,12 @@ void draw() {
   } else if (scene == 3) {
     fill(180);
     rect(480, 270, 960, 540);
+    fill(0);
+    textSize(25);
+    text("Enter event title:", 600, 384);
+    text("Enter event date:", 600, 464);
+    text("Enter event time:", 600, 544);
+    text("Enter event duration:", 558, 624);
     textAlign(LEFT);
     for (TEXTBOX t : textboxes) {
       t.DRAW();

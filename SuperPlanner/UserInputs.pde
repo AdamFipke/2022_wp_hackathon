@@ -2,8 +2,14 @@ String txt = "";
 int click = 0;
 
 void initLayout() {
-  TEXTBOX box1 = new TEXTBOX(720, 310, 300, 30);
+  TEXTBOX box1 = new TEXTBOX(780, 360, 350, 30);
+  TEXTBOX box2 = new TEXTBOX(780, 440, 350, 30);
+  TEXTBOX box3 = new TEXTBOX(780, 520, 350, 30);
+  TEXTBOX box4 = new TEXTBOX(780, 600, 350, 30);
   textboxes.add(box1);
+  textboxes.add(box2);
+  textboxes.add(box3);
+  textboxes.add(box4);
 }
 
 void mousePressed() {
