@@ -35,10 +35,21 @@ void keyReleased() {
 }
 
 void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
-  if (buttons1[0].isMouseOver()) {
-    scene = 2;
+  if (scene == 0) { //TITLE SCREEN BUTTONS
+    //if (buttons0[0].isMouseOver()) {
+    //  background(PurpleBG);
+    //  scene = 1;
+    //}
+  } else if (scene == 1) { //MONTH VIEW BUTTONS
+    if (buttons1[0].isMouseOver()) {
+      scene = 2;
+    }
+  } else if (scene == 2) { //WEEK VIEW BUTTONS
+    if (buttons2[0].isMouseOver()) {
+      
+    }
+    if (buttons2[1].isMouseOver()) {
+      
+    }
   }
-  else if(buttons[6].isMouseOver()){
-    background(PurpleBG);
-    scene = 1;
-}}
+}

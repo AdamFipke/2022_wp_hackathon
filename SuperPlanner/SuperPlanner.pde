@@ -12,7 +12,9 @@ PImage FlowerBG;
 Button[] buttons0; //scene 0 buttons
 Button[] buttons1; //scene 1 buttons
 Button[] buttons2; //scene 2 buttons
-int scene = 0; //1 = Month View, 2 = Week View
+int scene = 0; //0 = Title View, 1 = Month View, 2 = Week View
+int week; //what week is selected for Week_View
+
 
 void setup() {
   size(1920, 1080);
@@ -23,13 +25,7 @@ void setup() {
   TieDyeBG = loadImage("TieDye.png");
   FlowerBG = loadImage("FlowerTheme.png"); 
 
-
-  //BUTTONS (LOAD THEM HERE) (int x, int y, int w, int h, color colour, color hovercolor, color border, color hoverborder, String text)
-  buttons = new Button[7]; //ADJUST SIZE IF YOUR ADDING A NEW BUTTON
-  for (int i = 0; i < 5; i++) { //for the 5 weeks
-    buttons[i] = new Button(0, 193 + 177*i, 1920, 177, color(255, 0, 0, 0), color(255, 0, 0, 0), color(255, 0, 0, 0), color(200, 0, 0), "");
-  }
-  buttons[6]= new Button(50, 50, 50, 50, color(60, 0, 0), color(60, 0, 0), color(100, 0, 0), color(100, 0, 0), "change theme");
+  //buttons0[0]= new Button(50, 50, 50, 50, color(60, 0, 0), color(60, 0, 0), color(100, 0, 0), color(100, 0, 0), "change theme");
 
 
   //BUTTONS (LOAD THEM HERE) (int x, int y, int w, int h, color colour, color hovercolor, color border, color hoverborder, String text)
@@ -55,7 +51,7 @@ void draw() {
   }
   if (scene==0) { //TITLE SCREEN
    Title_View();
-    buttons[6].update();
+    //buttons[6].update();
   } else if (scene == 1) { //MONTH VIEW SCREEN
     Month_View();
     for (int i = 0; i < 5; i++) { //updates buttons to see if they're being hovered over (only first 5 which are the 'select week' buttons)
