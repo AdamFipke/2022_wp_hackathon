@@ -18,6 +18,8 @@ Button text;       //button to swap to scene 3
 int scene = 0; //0 = Title View, 1 = Month View, 2 = Week View
 PFont dayF;
 PFont monthF;
+Event[] events = new Event[999];
+int numOfEvents = 0;
 
 void fonts(){
 dayF = createFont("RobotoSlab-Regular.ttf", 30);
