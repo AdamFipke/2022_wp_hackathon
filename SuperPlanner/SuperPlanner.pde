@@ -10,6 +10,7 @@ PImage TreesBG;
 PImage TieDyeBG;
 PImage FlowerBG;
 PImage bg;
+PImage d;
 Button[] buttons0; //scene 0 buttons
 Button[] buttons1; //scene 1 buttons
 Button[] buttons2; //scene 2 buttons
@@ -35,16 +36,21 @@ void setup() {
   initLayout();
   TieDyeBG = loadImage("TieDye.png");
   FlowerBG = loadImage("FlowerTheme.png"); 
+  d = loadImage("default.png");
 
   //BUTTONS (LOAD THEM HERE) (int x, int y, int w, int h, color colour, color hovercolor, color border, color hoverborder, String text)
 
   //SCENE 0 BUTTONS
-  buttons0 = new Button[5]; //ADJUST SIZE IF YOU'RE ADDING A NEW BUTTON
-    buttons0[0]= new Button(100, 750, 100, 100, color(139, 130, 197), color(139,130,197), color(0), color(200, 0, 0), "Purple Theme");
-    buttons0[1] = new Button(350, 750, 100, 100, color(255), color(0), color(10), color(255), "Space Theme");
-    buttons0[2] = new Button(600,750,100,100,color(145,200,126), color(145,200,126),color(0), color(49,112,52), "Tree Theme");
-    buttons0[3] = new Button(850,750,100,100,color(44,57,142), color(148,21,207),color(110,18,155),color(236,71,210), "Tie-Dye Theme");
-    buttons0[4] = new Button(1100,750,100,100,color(198,76,177),color(255,255,78),color(248,166,163),color(248,163,246), "Flower Theme");
+  buttons0 = new Button[8]; //ADJUST SIZE IF YOU'RE ADDING A NEW BUTTON
+    buttons0[0]= new Button(200, 750, 100, 100, color(139, 130, 197), color(139,130,197), color(0), color(200, 0, 0), "Purple");
+    buttons0[1] = new Button(475, 750, 100, 100, color(255), color(0), color(10), color(255), "Space");
+    buttons0[2] = new Button(750,750,100,100,color(145,200,126), color(145,200,126),color(0), color(49,112,52), "Tree");
+    buttons0[3] = new Button(975,750,100,100,color(44,57,142), color(148,21,207),color(110,18,155),color(236,71,210), "Tie-Dye");
+    buttons0[4] = new Button(1250,750,100,100,color(198,76,177),color(255,255,78),color(248,166,163),color(248,163,246), "Flower");
+    buttons0[5] = new Button(1525,750,100,100,color(80,184,231),color(80,184,231),color(0),color(128,132,137), "Default1");
+    buttons0[6] = new Button(1800,750,100,100,color(80,184,231),color(80,184,231),color(0),color(128,132,137), "Default2");
+    buttons0[7] = new Button(2075,750,100,100,color(80,184,231),color(80,184,231),color(0),color(128,132,137), "Default3");
+    
   //SCENE 1 BUTTONS
   buttons1 = new Button[5]; //ADJUST SIZE IF YOU'RE ADDING A NEW BUTTON
   for (int i = 0; i < 5; i++) { //for the 5 weeks in scene 1
@@ -68,6 +74,9 @@ void draw() {
     buttons0[2].update();
     buttons0[3].update();
     buttons0[4].update();
+    buttons0[5].update();
+    buttons0[6].update();
+    buttons0[7].update();
   } else if (scene == 1) { //MONTH VIEW SCREEN
     Month_View();
     for (int i = 0; i < 5; i++) { //updates buttons to see if they're being hovered over (only first 5 which are the 'select week' buttons)

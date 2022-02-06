@@ -59,6 +59,9 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
     } else if (buttons0[4].isMouseOver()) {
       bg = FlowerBG;
       scene = 1;
+    } else if (buttons0[5].isMouseOver()||buttons0[6].isMouseOver()||buttons0[7].isMouseOver()) {
+      bg = d;
+      scene = 1;
     }
     background(bg);
   } else if (scene == 1) { //MONTH VIEW BUTTONS
@@ -90,7 +93,6 @@ void checkIfButtonsPressed() { //FUNCTIONALITY FOR BUTTONS
       scene = 3;
     }
     if (buttons3[0].isMouseOver()) { //INSERT EVENT BUTTON
-      
     }
   }
 }
