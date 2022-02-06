@@ -40,26 +40,11 @@ fill(255);
   textAlign(CENTER);
   text(firstdate.getMonth().toString(), width/2, 110);
 
-  weekbuttons();
+
   ChangeMonthButton();
 }
 
-//WEEK BUTTONS
-void weekbuttons() {
-  r = new Rectangle[5];
 
-  for (int i = 0; i < 5; i++) {
-    int x1 = 0;
-    int x2 = 1920;
-    int y1 = 190 + 178*(i);
-    int y2 = 1990 + 2*178*i;
-    r[i] = new Rectangle(x1, x2, y1, y2);
-  }
-
-  for (int j = 0; j < 5; j++) {
-    r[j].dra();
-  }
-}
 
 //CHANGE MONTH BUTTONS
 public void ChangeMonthButton() {

@@ -1,8 +1,0 @@
-//public class monthButton {  
- // if ( mouseX > 650 & mouseX < 690 & mouseY > 70 & mouseY < 90){
-     // do the thing
-//}
-//  if (mouseX > 1230 & mouseX < 1270 & mouseY > 70 & mouseY < 90){
-     // do the other thing
-//     }
-//}
