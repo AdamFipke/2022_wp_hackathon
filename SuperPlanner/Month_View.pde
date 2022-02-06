@@ -1,6 +1,7 @@
 public void Month_View() {
   
   //DISPLAY DATES
+  textAlign(LEFT);
   textSize(18);
   LocalDate firstdate = LocalDate.now();
   firstdate = firstdate.withDayOfMonth(1);

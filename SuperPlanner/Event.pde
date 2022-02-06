@@ -1,7 +1,7 @@
 String txt = "";
 int click = 0;
 
-void draw() {
+void draws() {
   fill(0);
   rect(400, 200, 200, 200, 15, 15, 15, 15);
   textSize(20);
