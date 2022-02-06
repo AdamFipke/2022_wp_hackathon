@@ -1,5 +1,5 @@
 public void Month_View() {
-
+fill(255);
   //DISPLAY DATES
   textAlign(LEFT);
   textSize(18);
@@ -15,15 +15,9 @@ public void Month_View() {
     }
   }
 
-  //FONTS
-  PFont dayF;
-  dayF = createFont("RobotoSlab-Regular.ttf", 30);
-  PFont monthF;
-  monthF = createFont("RobotoSlab-Bold.ttf", 100);
-
   //WEEKDAY TITLES
   textAlign(CENTER, BOTTOM);
-  textFont(dayF);
+  //textFont(dayF);
   textSize(30);
   text("SUNDAY", 1920/7*0.5, 190);
   text("MONDAY", 1920/7*1.5, 190);
