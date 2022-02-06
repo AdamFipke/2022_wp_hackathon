@@ -85,6 +85,7 @@ void draw() {
     buttons0[7].update();
     buttons0[8].update();
   } else if (scene == 1) { //MONTH VIEW SCREEN
+  background(bg);
     Month_View();
     for (int i = 0; i < 5; i++) { //updates buttons to see if they're being hovered over (only first 5 which are the 'select week' buttons)
       buttons1[i].update();
