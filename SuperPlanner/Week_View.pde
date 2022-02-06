@@ -2,7 +2,7 @@ import java.time.format.*;
 
 public void Week_View() {
   fill(0);
-  
+  stroke(0);
   //DISPLAY DATES
   int topTimes = 140; //location for where topmost time is shown
   textSize(26);
